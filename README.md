@@ -62,9 +62,9 @@ For each scenario:
 ## Important Notes
 
 - Users must provide their own:
-  - MODSIM executable (modify model name in BatchRunner.py and Run.py)
-  - MODSIMNodes.xlsx (to map from the .cvs files to nodes inside the Modsim model)
-  - Input datasets: csv files for each scenario  
+  - MODSIM executable, .xy and .exe files (remembere to modify model name in BatchRunner.py and Run.py)
+  - Input datasets: csv files for each scenario
+  - MODSIMNodes.xlsx (to map from the .cvs files to nodes inside the Modsim model)  
 
 ---
 
