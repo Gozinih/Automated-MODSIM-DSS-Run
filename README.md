@@ -1,6 +1,6 @@
-# MODSIM Batch Scenario Runner
+# Automated MODSIM-DSS Runner
 
-A Python-based workflow for preparing, executing, and post-processing batch MODSIM simulations using daily scenario inputs. This repository enables automated large-scale hydropower system simulations by integrating data preprocessing, model updating, parallel execution, and result extraction.
+A Python-based workflow for preparing (importing daily inflow and demand scenarios) and executing (Parallel Run) MODSIM-DSS modles.
 
 ---
 
@@ -13,8 +13,6 @@ This project was developed to support scenario-based hydropower system analysis,
 - Updating MODSIM `.xy` model files dynamically
 - Running MODSIM simulations in parallel batches
 - Extracting and organizing key output results
-
-The workflow is designed for computational efficiency, reproducibility, and scalability across many scenarios.
 
 ---
 
@@ -31,80 +29,16 @@ The workflow is designed for computational efficiency, reproducibility, and scal
 
 ## Repository Structure
 
-modsim-batch-runner/
-├── Run.py                    # Main batch execution script  
-├── BatchRunner.py           # Multi-run orchestrator  
-├── ExtractData.py           # Converts CSV data to MODSIM format  
+Automated-MODSIM-DSS-Run/
+├── BatchRunner.py           # Multi-run
+├── Run.py                   # Main execution script    
+├── ExtractData.py           # Converts inflow and demand CSV data to MODSIM format  
 ├── ModifyMODSIM.py          # Updates MODSIM .xy file  
 ├── RunMODSIM_Single.py      # Executes MODSIM model  
-├── MODSIMNodes.xlsx         # Node mapping (optional / if shareable)  
+├── MODSIMNodes.xlsx         # MODSIM-DSS Node mapping  
 ├── requirements.txt         # Python dependencies  
 ├── README.md  
 ├── LICENSE  
-
----
-
-## Workflow Description
-
-1. Data Extraction (ExtractData.py)  
-   - Reads raw daily scenario CSV files  
-   - Maps station columns to MODSIM nodes  
-   - Applies unit conversions and multipliers  
-   - Outputs MODSIM-ready time series  
-
-2. Model Update (ModifyMODSIM.py)  
-   - Parses MODSIM `.xy` file  
-   - Replaces time series blocks for inflow and demand nodes  
-   - Maintains MODSIM file structure integrity  
-
-3. Simulation Execution (RunMODSIM_Single.py)  
-   - Runs the MODSIM executable  
-   - Tracks execution time  
-   - Captures errors if they occur  
-
-4. Batch Processing (Run.py)  
-   - Processes multiple scenarios  
-   - Runs simulations in parallel batches  
-   - Manages working directories  
-
-5. Multi-Run Automation (BatchRunner.py)  
-   - Executes multiple scenario groups  
-   - Organizes outputs  
-   - Cleans large intermediate files  
-
----
-
-## Installation
-
-Clone the repository:
-
-git clone https://github.com/YOUR-USERNAME/modsim-batch-runner.git  
-cd modsim-batch-runner  
-
-Create virtual environment (recommended):
-
-python -m venv .venv  
-.venv\Scripts\activate  
-
-Install dependencies:
-
-pip install -r requirements.txt  
-
----
-
-## Usage
-
-Run a batch of scenarios:
-
-python Run.py ^
-  --csv_folder "path/to/DailyTimeseriesCSVFiles" ^
-  --results_folder "path/to/output_folder" ^
-  --base_folder "path/to/base_MODSIM_folder" ^
-  --batchsize 8  
-
-Run multiple scenario groups:
-
-python BatchRunner.py  
 
 ---
 
@@ -118,7 +52,7 @@ Scenario CSV files:
 MODSIMNodes.xlsx must include:
 - MODSIM node name  
 - station index  
-- multiplier  
+- multiplier (if applicable)  
 
 ---
 
@@ -152,51 +86,8 @@ For each scenario:
   - base model files  
   - input datasets  
 
-- Do not upload proprietary or restricted files  
-
----
-
-## Limitations
-
-- Windows-based paths  
-- Assumes fixed MODSIM structure  
-- Uses fixed cleanup delay  
-- Limited validation  
-
----
-
-## Suggested Improvements
-
-- Replace hard-coded paths  
-- Add logging  
-- Improve error handling  
-- Add cross-platform support  
-- Include sample dataset (if allowed)  
-- Add unit tests  
-
----
-
-## Applications
-
-- Hydropower system stress testing  
-- Climate change impact analysis  
-- Scenario-based water resource modeling  
-- Large-scale simulation automation  
-
 ---
 
 ## Citation
 
-Gozini, H. (2026). MODSIM Batch Scenario Runner. GitHub repository.
-
----
-
-## Author
-
-Hamid Gozini
-
----
-
-## License
-
-This project is licensed under the MIT License.
+TBD
