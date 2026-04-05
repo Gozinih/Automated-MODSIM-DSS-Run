@@ -1,6 +1,6 @@
 # Automated MODSIM-DSS Runner
 
-A Python-based workflow for preparing (importing daily inflow and demand scenarios) and executing (Parallel Run) MODSIM-DSS modles.
+A Python-based workflow for preparing (importing daily inflow and demand scenarios) and executing (Parallel Run) MODSIM-DSS models.
 
 ---
 
