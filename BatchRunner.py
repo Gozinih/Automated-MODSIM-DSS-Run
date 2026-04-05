@@ -4,16 +4,15 @@ import subprocess
 from time import perf_counter
 from tqdm import tqdm
 
-# modelname: MB_HydroSim
 
 # Files you want to keep from each run
 files_to_keep = {
-    "MB_HydroSimHydroTargetOutput.csv",
-    "MB_HydroSimRES_STOROutput.csv"
+    "[modelname]HydroTargetOutput.csv",
+    "[modelname]RES_STOROutput.csv"
 }
 
-TOTAL_RUNS = 20 # EG1 to EG20
-batchsize = 13  # Scenario in each EG
+TOTAL_RUNS = 20 # 20 Folders (EG1 to EG20), each has 25 scenairos
+batchsize = 13  # number of parallel run for scenarios
 
 overall_start = perf_counter()
 with tqdm(total=TOTAL_RUNS, desc="MODSIM batches", unit="run") as pbar:
@@ -21,10 +20,10 @@ with tqdm(total=TOTAL_RUNS, desc="MODSIM batches", unit="run") as pbar:
         iter_start = perf_counter()
 
         suffix = f"EG{i}"
-        csv_folder = f"C:/Users/gozinih/Desktop/New folder/EG-HT2/Scenarios1_EG-HT2/Scenarios_{suffix}/DailyTimeseriesCSVFiles" # Patch to .csv file in each scenario to read inflow and demand
-        results_folder = f"C:/Users/gozinih/Desktop/New folder/EG-HT2/MODSIM_EG-HT2/MODSIM_{suffix}" # Patch to generate the MODSIM model
-        finalresults_folder = f"C:/Users/gozinih/Desktop/New folder/EG-HT2/Results1_EG-HT2/Results_{suffix}" # Patch to save the requaired results from each MODSIM run
-        base_folder = "MB_HydroSim_AutoRun_EG-HT2" # MODSIM model folder, having .xy file and .exe file
+        csv_folder = f"C:/Users/gozinih/Desktop/EG/Scenarios/Scenarios_{suffix}/DailyTimeseriesCSVFiles" # Patch to .csv file in each scenario to read inflow and demand
+        results_folder = f"C:/Users/gozinih/Desktop/EG/MODSIM/MODSIM_{suffix}" # Patch to generate the MODSIM model
+        finalresults_folder = f"C:/Users/gozinih/Desktop/EG/Results/Results_{suffix}" # Patch to save the requaired results from each MODSIM run
+        base_folder = "[modelname]_Folder" # MODSIM model folder, having .xy file and .exe file
 
         # --- Run MODSIM batch ---
         subprocess.run([
