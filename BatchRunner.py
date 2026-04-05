@@ -4,6 +4,8 @@ import subprocess
 from time import perf_counter
 from tqdm import tqdm
 
+# modelname: MB_HydroSim
+
 # Files you want to keep from each run
 files_to_keep = {
     "MB_HydroSimHydroTargetOutput.csv",
