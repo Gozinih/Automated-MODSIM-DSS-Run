@@ -16,17 +16,6 @@ This project was developed to support scenario-based hydropower system analysis,
 
 ---
 
-## Key Features
-
-- Automated workflow from raw CSV inputs to final simulation outputs  
-- Parallel execution using multiprocessing to reduce runtime  
-- Flexible batch control for large ensembles of scenarios  
-- Custom node mapping using an external Excel file  
-- Selective output extraction to reduce storage requirements  
-- Modular design for easy modification and extension  
-
----
-
 ## Repository Structure
 
 Automated-MODSIM-DSS-Run/
@@ -53,17 +42,6 @@ MODSIMNodes.xlsx must include:
 - MODSIM node name  
 - station index  
 - multiplier (if applicable)  
-
----
-
-## MODSIM Model Requirements
-
-Base model folder structure:
-
-<base_folder>/
-├── MB_HydroSim.xy  
-└── MB_HydroSim Custom Run/
-    └── MB_HydroSim_CustomRun.exe  
 
 ---
 
