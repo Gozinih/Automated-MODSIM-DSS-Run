@@ -35,12 +35,15 @@ Automated-MODSIM-DSS-Run/
 Scenario CSV files:
 - No header row  
 - First two columns: year, month  
-- Remaining columns: station data  
+- Remaining columns: daily station data, inflow/demand  
 
 MODSIMNodes.xlsx must include:
 - MODSIM node name  
 - station index  
 - multiplier (if applicable)  
+
+MODSIM-DSS model:
+- .xy and .exe files
 
 ---
 
@@ -57,10 +60,8 @@ For each scenario:
 
 ## Important Notes
 
-- This repository does NOT include MODSIM software  
 - Users must provide their own:
-  - MODSIM executable  
-  - base model files  
+  - MODSIM executable
   - input datasets  
 
 ---
