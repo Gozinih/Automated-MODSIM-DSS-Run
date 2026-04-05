@@ -21,7 +21,7 @@ CSV_FOLDER = args.csv_folder
 RESULTS_FOLDER = args.results_folder
 BASE_FOLDER = args.base_folder
 BATCH_SIZE = args.batchsize
-EXE_RELATIVE_PATH = os.path.join("MB_HydroSim Custom Run", "MB_HydroSim_CustomRun.exe")
+EXE_RELATIVE_PATH = os.path.join("MB_HydroSim Custom Run", "MB_HydroSim_CustomRun.exe") #MB_HydroSim is the MODSIM model name, modify accordingly
 XY_RELATIVE_PATH = "MB_HydroSim.xy"
 files_to_remove = ["MB_HydroSim.xy", "MB_HydroSimOUTPUT.mdb"]
 
