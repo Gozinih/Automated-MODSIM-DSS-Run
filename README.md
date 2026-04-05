@@ -53,8 +53,8 @@ For each scenario:
 - A working MODSIM model is created  
 - Simulation is executed  
 - Selected outputs are saved, including:  
-  - MB_HydroSimHydroTargetOutput.csv  
-  - MB_HydroSimRES_STOROutput.csv  
+  - [modelname]TargetOutput.csv  
+  - [modelname]RES_STOROutput.csv  
 
 ---
 
