@@ -24,7 +24,7 @@ Automated-MODSIM-DSS-Run/
 ├── ExtractData.py           # Converts inflow and demand CSV data to MODSIM format  
 ├── ModifyMODSIM.py          # Updates MODSIM .xy file  
 ├── RunMODSIM_Single.py      # Executes MODSIM model  
-├── MODSIMNodes.xlsx         # MODSIM-DSS Node mapping   
+├── MODSIMNodes.xlsx         # MODSIM Node mapping   
 ├── README.md  
 ├── LICENSE  
 
