@@ -4,7 +4,7 @@ import subprocess
 from time import perf_counter
 from tqdm import tqdm
 
-# MB_HydroSim is the MODSIM model name
+# MB_HydroSim is the MODSIM model name, Modify Accordingly
 
 # Files you want to keep from each run
 files_to_keep = {
