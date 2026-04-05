@@ -8,8 +8,8 @@ from tqdm import tqdm
 
 # Files you want to keep from each run
 files_to_keep = {
-    "[modelname]HydroTargetOutput.csv",
-    "[modelname]RES_STOROutput.csv"
+    "MB_HydroSimHydroTargetOutput.csv",
+    "MB_HydroSimRES_STOROutput.csv"
 }
 
 TOTAL_RUNS = 20 # 20 Folders (EG1 to EG20), each has 25 scenairos
