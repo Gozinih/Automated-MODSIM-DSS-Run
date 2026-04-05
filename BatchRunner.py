@@ -4,6 +4,7 @@ import subprocess
 from time import perf_counter
 from tqdm import tqdm
 
+# MB_HydroSim is the MODSIM model name
 
 # Files you want to keep from each run
 files_to_keep = {
@@ -23,7 +24,7 @@ with tqdm(total=TOTAL_RUNS, desc="MODSIM batches", unit="run") as pbar:
         csv_folder = f"C:/Users/gozinih/Desktop/EG/Scenarios/Scenarios_{suffix}/DailyTimeseriesCSVFiles" # Patch to .csv file in each scenario to read inflow and demand
         results_folder = f"C:/Users/gozinih/Desktop/EG/MODSIM/MODSIM_{suffix}" # Patch to generate the MODSIM model
         finalresults_folder = f"C:/Users/gozinih/Desktop/EG/Results/Results_{suffix}" # Patch to save the requaired results from each MODSIM run
-        base_folder = "[modelname]_Folder" # MODSIM model folder, having .xy file and .exe file
+        base_folder = "MB_HydroSim_Folder" # MODSIM model folder, having .xy file and .exe file
 
         # --- Run MODSIM batch ---
         subprocess.run([
