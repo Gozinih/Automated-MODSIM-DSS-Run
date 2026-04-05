@@ -6,7 +6,7 @@ A Python-based workflow for preparing (importing daily inflow and demand scenari
 
 ## Overview
 
-This project was developed to support scenario-based hydropower system analysis, particularly for large-scale systems such as the Manitoba Hydro network. It automates the full simulation pipeline by:
+This project was developed to support scenario-based hydropower system analysis. It automates the full simulation pipeline by:
 
 - Converting daily inflow scenario data into MODSIM-compatible format
 - Mapping station data to MODSIM nodes
